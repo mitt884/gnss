@@ -20,7 +20,7 @@ def convert_epoch_time(epoch_time):
     second = float(parts[5]) # Because seconds value are float so we need to convert it separately
     # Convert days, months, years, hours, minutes, seconds to new format
     formatted_time = datetime(year + 2000, month, day, hour, minute, int(second)).strftime("%H:%M:%S %d/%m/%Y")
-    # Convert again for datetime type
+    # Convert again for datetime type 
     converted_epoch_time = datetime.strptime(formatted_time, "%H:%M:%S %d/%m/%Y")
     return converted_epoch_time 
 
